@@ -1,0 +1,46 @@
+
+<?php 
+require '_functions.php';
+include 'partials/top.php';
+
+consoleLog($_POST, 'POST Data');
+
+// Get form data
+$name = $_POST['name'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
+$size = $_POST['size'];
+$tiers = $_POST['tiers'];
+$flavour = $_POST['flavour'];
+$note = $_POST['note'];
+$theme = $_POST['theme'];
+$datetime = $_POST['datetime'];
+$address = $_POST['address'];
+
+$db = connectToDB();
+
+//Setup a query to insert all company info
+$query = 'INSERT INTO bookings
+           (`name`, email, phone, `size`, tiers, flavour, note, theme, `datetime`, `address`) 
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+
+//Attempt to run the query
+try {
+    $stmt = $db->prepare($query);
+    $stmt->execute([$name, $email, $phone, $size, $tiers, $flavour, $note, $theme, $datetime, $address]);
+}
+
+catch (PDOException $e) {
+    consoleLog($e->getMessage(),'DB List Fetch', ERROR);
+    die('<h2>There was an error sending data to the database. Please check that all of your selections were valid.<h2>');
+}
+
+?>
+
+<section class="contents">
+    <h1>Success!</h1>
+    <p>Thank you for placing your order with <?= SITE_NAME ?>. We will contact you about the status of your order shortly.</p>
+    <a href="index.php">Return to home page</a>
+</section>
+
+<?php include 'partials/bottom.php';?>
