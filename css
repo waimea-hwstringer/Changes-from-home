@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+@media only screen and (min-width: 600px){
+    .contents {
+        max-width: 55rem;
+        justify-self: center;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+html {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.contents {
+    flex: 1;
+    width: 100%;
+}
+
+/*INDEX*******************************************************************************/
+/*Nav bar & header---------------*/
+
+header {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(69, 186, 191, 1);
+    width: 100%;
+}
+
+header > * {
+    margin: 0;
+}
+
+header h1 {
+    flex: 1;
+}
+
+header a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color:black;
+    margin-right: 1.5rem;
+}
+
+#logo {
+    max-width: 108px;
+    max-height: 108px;
+}
+
+img {
+    max-width: 12rem;
+    max-height: 12rem;
+}
+
+/*Main portion---------------*/
+
+.indexExampleImages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+#indexExamples h3{
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+}
+
+/*Main---------------*/
+
+article {
+    max-width: fit-content;
+}
+
+#heroImage h1 {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    display: flex;
+    margin-top: 1rem;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    justify-content: center;
+    padding: 3rem;
+}
+
+#heroImage {
+    background-image: url('../images/heroimage.png');
+    background-size: cover;
+    margin-top: 0;
+}
+
+.paragraph h3 {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.paragraph p {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    padding-bottom: 2rem;
+}
+
+#orderNow a {
+    display: flex;
+    color: white;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgba(69, 186, 191, 1);
+    border-radius: 1rem;
+    text-decoration: none;
+    margin:1rem;
+}
+
+.examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/*ORDER*FORM*******************************************************************************/
+
+.formHead {
+    font-weight: 400;
+    font-size: 2.8rem;
+    margin-left: 1rem;
+}
+
+form {
+    background: #fff;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+form label {
+    font-weight: bold;
+    margin-left: 0.4rem;
+}
+
+.uploadFileButton {
+    cursor: pointer;
+    display: block;
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 20px;
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 0.9rem;
+    background-color: rgb(217, 217, 217);
+    margin-left: 0rem;
+    font-weight: 400;
+}
+
+input[type="file"] {
+    display: none;
+}
+  
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="number"],
+form input[type="datetime-local"],
+form select,
+form input[type="submit"] {
+    display: block;
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 20px;
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 0.9rem;
+    background-color: rgb(217, 217, 217);
+}
+
+textarea {
+    display: block;
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 20px;
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 0.9rem;
+    background-color: rgb(217, 217, 217);
+    font-family: "Inter", sans-serif;
+}
+
+.textBelow {
+    margin-left: 0rem;
+    margin-bottom: 0rem;
+}
+
+form input[type="submit"] {
+    background: rgba(69, 186, 191, 1);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background: rgb(53, 143, 146);
+}
+
+/*ADMIN*LOGIN*******************************************************************************/
+
+/*The text at the top of the admin login page is defined by the class .formHead which can be found on line 82 under the ORDER FORM scetion*/
+
+#adminLogin {
+    border: 5px solid rgb(53, 143, 146);
+    background-color: rgb(193, 223, 223);
+    margin-top: 3rem;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+#adminLogin form {
+    background-color: inherit;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+/*ADMIN*INDEX*******************************************************************************/
+
+.adminHead {
+    font-weight: 400;
+    font-size: 2.4rem;
+    margin-left: 0.5rem;
+}
+
+#orderList {
+    margin-bottom: 3rem;
+}
+
+#adminButtons a {
+    background: rgba(69, 186, 191, 1);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: block;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.9rem;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.adminTableTitle {
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    text-align: center;
+    padding-right: 1rem;
+}
+
+td a {
+    text-align: center;
+    text-decoration: none;
+}
+
+/*FORM*THEME*******************************************************************************/
+
+#addThemeForm {
+    width: 30rem;
+}
+
+@media only screen and (max-width: 600px) { /*makes the form less wide when the screen is lower than 600px*/
+    #addThemeForm {
+        width: 100%;
+    }
+}
+
+
+#deleteIcon {
+    max-height: 1.2rem;
+}
+
+#deleteList {
+    padding: 0;
+    list-style-type:none;
+    display: block;
+    text-decoration: none;
+}
+
+#deleteList li{
+    margin-bottom: 0.5rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+    background-color: rgb(119, 119, 119);
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 0.9rem;
+    background-color: rgb(217, 217, 217);
+    font-family: "Inter", sans-serif;
+}
+
+#deleteList li a {
+    text-decoration: none;
+
+}
+
+/*FORM*EXAMPLE*******************************************************************************/
+
+#adminExamples{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.adminExampleContainer {
+    position: relative;
+    max-width: 16rem;
+    margin-right: 1rem;
+}
+
+.adminExampleImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.adminExampleOverlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(53, 143, 146);
+  color: #000000;
+  width: 100%;
+  transition: .5s ease;
+  opacity: 0;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.adminExampleContainer:hover .adminExampleOverlay {
+  opacity: 1;
+}
+
+/*FOOTER*******************************************************************************/
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(135, 197, 200, 1);
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: auto;
+    bottom:0;
+}
